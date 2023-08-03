@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  app:
+    image: registry.gitlab.com/tranvanchilong/async_web_gia:v0.4
+    container_name: wey2
+    command: python manage.py runserver 0.0.0.0:8000
+    ports:
+      - "5010:8000"
+    restart: always
+    volumes:
+      - ./app:/app
